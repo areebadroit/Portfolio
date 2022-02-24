@@ -1,11 +1,7 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
 import image1 from "./assets/img/portfolio/wordwrap.jpeg";
-import image4 from "./assets/img/portfolio/cake.png";
-import image3 from "./assets/img/portfolio/circus.png";
 import image2 from "./assets/img/portfolio/game.png";
-import image5 from "./assets/img/portfolio/safe.png";
-import image6 from "./assets/img/portfolio/submarine.png";
 var link1 = "http://wrapword.herokuapp.com/blogs";
 var link2 = "https://tictactoe-adr.netlify.com/";
 const PortfolioSection = () => {
