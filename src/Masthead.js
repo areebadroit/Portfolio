@@ -11,6 +11,7 @@ const Masthead = () => (
         alt="..."
       />
       <h1 className="masthead-heading text-uppercase mb-0">Hi, I am Areeb</h1>
+      <h3 className="masthead-heading text-uppercase mb-0"></h3>
       <div className="divider-custom divider-light">
         <div className="divider-custom-line"></div>
         <div className="divider-custom-icon">

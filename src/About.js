@@ -14,14 +14,21 @@ const About = () => {
                 </div>
                 {/* <!-- About Section Content--> */}
                 <div className="row">
-                    <div className="col-lg-4 ms-auto"><p className="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div className="col-lg-4 me-auto"><p className="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div className="col-lg-4 ms-auto"><p className="lead">A Dynamics 365 CE and Power Platform Professional with around two years of experience in Solution Customisation, Configuration and Designing both from Functional and Technical Perspective
+                    </p>
+                    </div>
+                    <div className="col-lg-4 me-auto"><p className="lead"> I also have a great alignment towards Data Structures and Algorithms, Problem Solving, MERN Stack Web Development and Core Computer Science Skills.</p></div>
+                    <p className='text-center mt-2 lead'>I believe “Every Challenge is just a Problem to Solve.” </p>
                 </div>
                 {/* <!-- About Section Button--> */}
                 <div className="text-center mt-4">
-                    <a className="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                    <a style={{margin:"5px"}} className="btn btn-xl btn-outline-light" href="https://portfolio-areeb.s3.amazonaws.com/Md+Areeb+Ansar.pdf" target="_blank">
                         <i className="fas fa-download me-2"></i>
-                        Free Download!
+                        CRM Specific Resume
+                    </a>
+                    <a style={{margin:"5px"}} className="btn btn-xl btn-outline-light" href="https://portfolio-areeb.s3.amazonaws.com/Md+Areeb+Ansar_Resume.pdf" target="_blank">
+                        <i className="fas fa-download me-2"></i>
+                        General Resume
                     </a>
                 </div>
             </div>

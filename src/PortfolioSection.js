@@ -1,11 +1,13 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
-import image1 from "./assets/img/portfolio/cabin.png";
-import image2 from "./assets/img/portfolio/cake.png";
+import image1 from "./assets/img/portfolio/wordwrap.jpeg";
+import image4 from "./assets/img/portfolio/cake.png";
 import image3 from "./assets/img/portfolio/circus.png";
-import image4 from "./assets/img/portfolio/game.png";
+import image2 from "./assets/img/portfolio/game.png";
 import image5 from "./assets/img/portfolio/safe.png";
 import image6 from "./assets/img/portfolio/submarine.png";
+var link1 = "http://wrapword.herokuapp.com/blogs";
+var link2 = "https://tictactoe-adr.netlify.com/";
 const PortfolioSection = () => {
   return (
     <section className="page-section portfolio" id="portfolio">
@@ -25,17 +27,17 @@ const PortfolioSection = () => {
         {/* <!-- Portfolio Grid Items--> */}
         <div className="row justify-content-center">
           {/* <!-- Portfolio Item 1--> */}
-          <PortfolioItem imageUrl={image1} />
+          <PortfolioItem imageUrl={image1} weblink={ link1}/>
           {/* <!-- Portfolio Item 2--> */}
-          <PortfolioItem imageUrl={image2} />
+          <PortfolioItem imageUrl={image2} weblink ={link2} />
           {/* <!-- Portfolio Item 3--> */}
-          <PortfolioItem imageUrl={image3} />
+          {/* <PortfolioItem imageUrl={image3} /> */}
           {/* <!-- Portfolio Item 4--> */}
-          <PortfolioItem imageUrl={image4} />
+          {/* <PortfolioItem imageUrl={image4} /> */}
           {/* <!-- Portfolio Item 5--> */}
-          <PortfolioItem imageUrl={image5} />
+          {/* <PortfolioItem imageUrl={image5} /> */}
           {/* <!-- Portfolio Item 6--> */}
-          <PortfolioItem imageUrl={image6} />
+          {/* <PortfolioItem imageUrl={image6} /> */}
         </div>
       </div>
     </section>
