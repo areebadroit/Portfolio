@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Contact = () => {
@@ -36,11 +36,15 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+    await e.preventDefault();
     // Call a function to send the data to the backend
-    sendDataToBackend(formData);
+    await sendDataToBackend(formData);
+    await window.location.reload();
   };
+  useEffect(() => {
+    // Code to run after form submission
+  }, [formData]);
   return (
     <section className="page-section" id="contact">
       <div className="container">
