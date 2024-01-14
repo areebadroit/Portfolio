@@ -1,15 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import avatar from './assets/img/avatar.png'
+import avatar from "./assets/img/avatar.png";
 
 const Masthead = () => (
   <header className="masthead bg-primary text-white text-center">
     <div className="container d-flex align-items-center flex-column">
-      <img
-        className="masthead-avatar mb-5"
-        src={avatar}
-        alt="..."
-      />
+      <img className="masthead-avatar mb-5" src={avatar} alt="..." />
       <h1 className="masthead-heading text-uppercase mb-0">Hi, I am Areeb</h1>
       <h3 className="masthead-heading text-uppercase mb-0"></h3>
       <div className="divider-custom divider-light">
@@ -20,7 +16,7 @@ const Masthead = () => (
         <div className="divider-custom-line"></div>
       </div>
       <p className="masthead-subheading font-weight-light mb-0">
-        Microsoft Power Platform - Web Development(MERN)
+        Software Engineer
       </p>
     </div>
   </header>

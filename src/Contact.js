@@ -1,6 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
+  const sendDataToBackend = async (data) => {
+    try {
+      const requestBody = JSON.stringify(data);
+      // Example headers for the request
+      const headers = {
+        "Content-Type": "application/json",
+      };
+      // Example POST request
+      await axios
+        .post(process.env.REACT_APP_BACKEND_URL, requestBody, { headers })
+        .then(function (response) {
+          console.log("Response:", response.data);
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Error:", error);
+    }
+  };
+  const [formData, setFormData] = useState({
+    fullname: "",
+    emailId: "",
+    contactNumber: "",
+    message: "",
+  });
+  const handleInputChange = (e) => {
+    // Update the state when input values change
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Call a function to send the data to the backend
+    sendDataToBackend(formData);
+  };
   return (
     <section className="page-section" id="contact">
       <div className="container">
@@ -19,7 +59,7 @@ const Contact = () => {
         {/* <!-- Contact Section Form--> */}
         <div className="row justify-content-center">
           <div className="col-lg-8 col-xl-7">
-            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <form id="contactForm" onSubmit={handleSubmit}>
               {/* <!-- Name input--> */}
               <div className="form-floating mb-3">
                 <input
@@ -28,6 +68,10 @@ const Contact = () => {
                   type="text"
                   placeholder="Enter your name..."
                   data-sb-validations="required"
+                  name="fullname"
+                  value={formData.fullname}
+                  onChange={handleInputChange}
+                  required
                 />
                 <label for="name">Full name</label>
                 <div
@@ -45,6 +89,10 @@ const Contact = () => {
                   type="email"
                   placeholder="name@example.com"
                   data-sb-validations="required,email"
+                  name="emailId"
+                  value={formData.emailId}
+                  onChange={handleInputChange}
+                  required
                 />
                 <label for="email">Email address</label>
                 <div
@@ -68,6 +116,9 @@ const Contact = () => {
                   type="tel"
                   placeholder="(123) 456-7890"
                   data-sb-validations="required"
+                  name="contactNumber"
+                  value={formData.contactNumber}
+                  onChange={handleInputChange}
                 />
                 <label for="phone">Phone number</label>
                 <div
@@ -84,8 +135,11 @@ const Contact = () => {
                   id="message"
                   type="text"
                   placeholder="Enter your message here..."
-                                  style={{ height: "10rem" }}
+                  style={{ height: "10rem" }}
                   data-sb-validations="required"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                 ></textarea>
                 <label for="message">Message</label>
                 <div
@@ -120,7 +174,7 @@ const Contact = () => {
               </div>
               {/* <!-- Submit Button--> */}
               <button
-                className="btn btn-primary btn-xl disabled"
+                className="btn btn-primary btn-xl"
                 id="submitButton"
                 type="submit"
               >
